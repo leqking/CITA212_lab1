@@ -34,8 +34,8 @@ public class balls_script : MonoBehaviour
     
    void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Collision Happened with " + collision.gameObject.name);
-        if (collision.collider.CompareTag("test"))
+       // Debug.Log("Collision Happened with " + collision.gameObject.name);
+       // if (collision.collider.CompareTag("test"))
         {
             Debug.Log("Hitting Floor");
         }

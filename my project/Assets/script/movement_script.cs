@@ -4,10 +4,13 @@ public class balls_script : MonoBehaviour
 {
     [SerializeField] float movespeed = 5f;
     [SerializeField] float rotatespeed = 120f;
+
+    bool iskey = false;
+    SpriteRenderer carRender;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        carRender = GetComponent<SpriteRenderer>();
     }
     //Rotations
 
@@ -39,6 +42,20 @@ public class balls_script : MonoBehaviour
         {
             Debug.Log("Hitting Floor");
         }
+       
+    }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log("Trigger Happened");
+         if(other.CompareTag("test2"))
+        {
+            iskey = true;
+            Debug.Log("You trigger with an object"+other.gameObject.name);
+            Debug.Log("iskey");
+            carRender.color = Color.pink;
+            Destroy(other.gameObject);
+        }
+
     }
 
 }

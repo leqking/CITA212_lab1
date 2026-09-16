@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - test
+  - test2
   layers:
   - Default
   - TransparentFX
